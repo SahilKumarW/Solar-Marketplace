@@ -48,16 +48,15 @@ const Header = ({ activeHeading }) => {
 
   return (
     <div
-      className={`${styles.section}`}
+      //   className={`${styles.section}`}
       style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
         width: "100%",
-        margin: "10px 0 0 0",
       }}
     >
-      <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
+      <div
+        className="hidden 800px:h-[100px] 800px:my-[20px] 800px:flex items-center justify-between"
+        style={{ margin: 0 }}
+      >
         <div>
           <Link to="/">
             <img
@@ -66,7 +65,7 @@ const Header = ({ activeHeading }) => {
               style={{
                 height: "100px",
                 width: "150px",
-                marginTop: "-25px",
+                marginTop: "-10px",
               }}
             />
           </Link>
@@ -78,7 +77,7 @@ const Header = ({ activeHeading }) => {
             placeholder="Search Product..."
             value={searchTerm}
             onChange={handleSearchChange}
-            className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
+            className="h-[40px] w-full px-2 border-[#012169] border-[2px] rounded-md"
           />
           <AiOutlineSearch
             size={30}
@@ -116,7 +115,7 @@ const Header = ({ activeHeading }) => {
       <div
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-[#87CEFA] h-[70px]`}
+        } transition hidden 800px:flex items-center justify-between w-full bg-[#012169] h-[70px]`}
       >
         <div
           className={`${styles.section} relative ${styles.normalFlex} justify-between`}

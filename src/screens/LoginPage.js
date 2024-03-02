@@ -24,80 +24,92 @@ const LoginPage = () => {
           Login to your account
         </h2>
       </div>
-      <div className="login-container">
-        <form>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div className="login-container">
+          <form>
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
 
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: "20px",
-            }}
-          >
             <div
               style={{
                 display: "flex",
-                // alignItems: "center",
-                marginRight: "100px",
+                justifyContent: "space-between",
+                marginTop: "20px",
               }}
             >
-              <input
-                type="checkbox"
-                name="remember-me"
-                id="remember-me"
-                className="h-3 w-3 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              />
-              <label
-                htmlFor="remember-me"
-                className="ml-2 block text-sm text-gray-900"
+              <div
+                style={{
+                  display: "flex",
+                  // alignItems: "center",
+                  marginRight: "100px",
+                }}
               >
-                Remember me
-              </label>
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                  className="h-3 w-3 mt-1 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                />
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-gray-900"
+                >
+                  Remember me
+                </label>
+              </div>
+              <div className="text-sm">
+                <a
+                  href=".forgot-password"
+                  className="font-medium text-red-600 hover:text-red-500 underline"
+                >
+                  Forgot your password?
+                </a>
+              </div>
             </div>
-            <div className="text-sm">
-              <a
-                href=".forgot-password"
-                className="font-medium text-red-600 hover:text-red-500 underline"
-              >
-                Forgot your password?
-              </a>
-            </div>
-          </div>
 
-          <div>
-            <button
-              type="submit"
-              className="custom-button"
-              onClick={handleLogin}
+            <div>
+              <button
+                type="submit"
+                className="custom-button"
+                onClick={handleLogin}
+              >
+                Login
+              </button>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
             >
-              Login
-            </button>
-          </div>
-
-          <div
-            style={{ display: "flex", alignItems: "center", marginTop: "20px" }}
-          >
-            <h4 style={{ marginRight: "8px" }}>Don't have any account?</h4>
-            <Link to="/Signup" className="text-blue-600">
-              Sign Up
-            </Link>
-          </div>
-        </form>
+              <h4 style={{ marginRight: "8px" }}>Don't have any account?</h4>
+              <Link to="/Signup" className="text-blue-600">
+                Sign Up
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

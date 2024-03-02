@@ -27,59 +27,71 @@ const SignupPage = () => {
           Create your account
         </h2>
       </div>
-      <div className="signup-container">
-        <form>
-          <label>Full Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div className="signup-container">
+          <form>
+            <label>Full Name:</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
 
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
 
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
 
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
+            <label>Confirm Password:</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
 
-          <div>
-            <button
-              type="submit"
-              className="custom-button"
-              onClick={handleSignup}
+            <div>
+              <button
+                type="submit"
+                className="custom-button"
+                onClick={handleSignup}
+              >
+                Sign Up
+              </button>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
             >
-              Sign Up
-            </button>
-          </div>
-
-          <div
-            style={{ display: "flex", alignItems: "center", marginTop: "20px" }}
-          >
-            <h4 style={{ marginRight: "8px" }}>Already have an account?</h4>
-            <Link to="/LoginPage" className="text-blue-600">
-              Login
-            </Link>
-          </div>
-        </form>
+              <h4 style={{ marginRight: "8px" }}>Already have an account?</h4>
+              <Link to="/LoginPage" className="text-blue-600">
+                Login
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 
 const HomePage = () => {
   return (
-    <div>
+    <div style={{ border: "2px solid red" }}>
       <Header activeHeading={1} />
       <Hero />
     </div>
