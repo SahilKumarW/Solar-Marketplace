@@ -1,33 +1,112 @@
 // Sample data for products
-const solarProducts = [
+export const solarProducts = [
   {
     id: 1,
-    name: "Solar Panel A",
-    description: "High-efficiency solar panel for residential use.",
-    specifications: "Capacity: 300W, Size: 60x40 inches",
-    price: 200,
-    quantity: 50,
-    image: "solar-panel-a.jpg",
+    category: "Solar Panels",
+    name: "High-Efficiency Solar Panel",
+    description:
+      "High-efficiency solar panel for residential and commercial use. Generate clean energy and reduce your carbon footprint.",
+    image_URL: "../Assets/solarpanel.jpg",
+
+    shop: {
+      name: "Dawson Electrics",
+      shop_avatar: {
+        public_id: "solar-tech-avatar",
+        url: "/Assets/dawson.jpg",
+      },
+      ratings: 4.5,
+    },
+    price: 39.99,
+    discount_price: 35.99,
+    rating: 4.5,
+    total_sell: 50,
+    stock: 20,
   },
   {
     id: 2,
-    name: "Solar Inverter B",
-    description: "Smart inverter with real-time monitoring.",
-    specifications: "Capacity: 5kW, Type: On-grid",
-    price: 500,
-    quantity: 30,
-    image: "solar-inverter-b.jpg",
+    category: "Solar Inverters",
+    name: "Smart Solar Inverter",
+    description:
+      "Smart solar inverter with real-time monitoring. Efficiently convert solar energy into usable electricity.",
+    image_URL: "../Assets/inverter.jpg",
+    shop: {
+      name: "Smart Solarz Solutions",
+      shop_avatar: {
+        public_id: "green-power-avatar",
+        url: "/Assets/smart.png",
+      },
+      ratings: 4.2,
+    },
+    price: 59.99,
+    discount_price: 54.99,
+    rating: 4.2,
+    total_sell: 30,
+    stock: 15,
   },
   {
     id: 3,
-    name: "Solar Battery C",
-    description: "Long-lasting lithium-ion battery for solar storage.",
-    specifications: "Capacity: 10kWh, Voltage: 48V",
-    price: 800,
-    quantity: 20,
-    image: "solar-battery-c.jpg",
+    category: "Solar Batteries",
+    name: "Long-Life Solar Battery",
+    description:
+      "Long-lasting lithium-ion battery for solar storage. Store excess energy during the day for use during the night or cloudy days.",
+    image_URL: "/Assets/battery.jpg",
+    shop: {
+      name: "Electronics Hub",
+      shop_avatar: {
+        public_id: "eco-storage-avatar",
+        url: "/Assets/hub.jpg",
+      },
+      ratings: 4.0,
+    },
+    price: 79.99,
+    discount_price: 79.99,
+    rating: 4.0,
+    total_sell: 25,
+    stock: 12,
   },
-  // Add more product entries as needed
+  {
+    id: 4,
+    category: "Solar Lights",
+    name: "Outdoor Solar Lights Set",
+    description:
+      "Illuminate your outdoor space with this set of energy-efficient solar lights. Ideal for gardens, pathways, and outdoor decor.",
+    image_URL: "../Assets/outdoor.png",
+    shop: {
+      name: "Amazon",
+      shop_avatar: {
+        public_id: "sunshine-lighting-avatar",
+        url: "/Assets/ama.png",
+      },
+      ratings: 4.8,
+    },
+    price: 49.99,
+    discount_price: 39.99,
+    rating: 4.8,
+    total_sell: 40,
+    stock: 18,
+  },
+  {
+    id: 5,
+    category: "Solar Chargers",
+    name: "Portable Solar Charger",
+    description:
+      "Stay charged on the go with this portable solar phone charger. Perfect for camping, hiking, and outdoor adventures.",
+    image_URL: "../Assets/portable.jpg",
+    shop: {
+      name: "Daraz",
+      shop_avatar: {
+        public_id: "solar-gadget-avatar",
+        url: "/Assets/daraz.png",
+      },
+      ratings: 4.5,
+    },
+    price: 29.99,
+    discount_price: 24.99,
+    rating: 4.5,
+    total_sell: 35,
+    stock: 20,
+  },
+  // Add more solar products as needed
 ];
 
 // navigation Data
@@ -231,7 +310,7 @@ const categoriesData = [
     id: 2,
     title: "Community Solar Projects",
     subTitle: "Community-based initiatives, shared solar projects",
-    image_Url: "../Assets/commercialSolarImage.jpg",
+    image_Url: "../Assets/community.jpg",
   },
 
   {
@@ -239,39 +318,33 @@ const categoriesData = [
     title: "Industrial Solar Solutions",
     subTitle:
       "Large-scale installations, industrial processes, energy management",
-    image_Url: "industrial-solar-image-url.jpg",
+    image_Url: "../Assets/industrial-solar-image-url.jpg",
   },
   {
     id: 4,
     title: "Agricultural Solar Solutions",
     subTitle: "Solar-powered irrigation, water pumps, farm solutions",
-    image_Url: "agricultural-solar-image-url.jpg",
+    image_Url: "../Assets/agricultural.jpg",
   },
   {
     id: 5,
     title: "Solar Energy Storage",
     subTitle: "Battery solutions, off-grid systems, backup power",
-    image_Url: "solar-energy-storage-image-url.jpg",
+    image_Url: "../Assets/solarenergy.jpg",
   },
   {
     id: 6,
     title: "Commercial Solar Solutions",
     subTitle: "Solar installations, financing, energy-efficient solutions",
-    image_Url: "commercial-solar-image-url.jpg",
-  },
-  {
-    id: 7,
-    title: "Solar Financing and Incentives",
-    subTitle: "Financing options, incentives, tax credits, rebates",
-    image_Url: "solar-financing-image-url.jpg",
+    image_Url: "/Assets/commercialSolarImage.jpg",
   },
 
-  {
-    id: 8,
-    title: "Solar Maintenance and Support",
-    subTitle: "Maintenance services, troubleshooting, customer support",
-    image_Url: "solar-maintenance-image-url.jpg",
-  },
+  // {
+  //   id: 7,
+  //   title: "Solar Maintenance and Support",
+  //   subTitle: "Maintenance services, troubleshooting, customer support",
+  //   image_Url: "solar-maintenance-image-url.jpg",
+  // },
 ];
 
 // Sample data for vendors
@@ -367,4 +440,4 @@ const orders = [
   // Add more order entries as needed
 ];
 
-export { solarProducts, vendors, user, cart, wishlist, orders, categoriesData };
+export { vendors, user, cart, wishlist, orders, categoriesData };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo5 from "../Assets/logo5.png";
+import logo5 from "../logo5.png";
 import styles from "../styles/styles";
 import { solarProducts } from "../static/data";
 import { useState } from "react";
@@ -12,7 +12,7 @@ import {
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 // import { useSelector } from "react-redux";
 import { BiMenuAltLeft } from "react-icons/bi";
-import DropDown from "./DropDown";
+// import DropDown from "./DropDown";
 import Navbar from "./NavBar";
 import { CgProfile } from "react-icons/cg";
 
@@ -23,6 +23,8 @@ const Header = ({ activeHeading }) => {
   const [dropDown, setDropDown] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
   const [openCart, setOpenCart] = useState(false);
+  const [loginDropDown, setLoginDropDown] = useState(false);
+
   //   const { cart } = useSelector((state) => state.cart);
   //   const { isVendor } = useSelector((state) => state.seller);
 
@@ -48,7 +50,7 @@ const Header = ({ activeHeading }) => {
 
   return (
     <div
-      //   className={`${styles.section}`}
+      className={"z-10"}
       style={{
         width: "100%",
       }}
@@ -100,9 +102,40 @@ const Header = ({ activeHeading }) => {
           ) : null}
         </div>
 
+        <div className="flex w-[170px] bg-black h-[50px]   items-center justify-center rounded-xl cursor-pointer">
+          <div
+            className="relative cursor-pointer mr-[15px] "
+            onClick={() => setLoginDropDown(!loginDropDown)}
+          >
+            <div className=" text-white py-4 px-4 cursor-pointer ">Login </div>
+
+            {loginDropDown && (
+              <div
+                className="absolute top-full left-0 bg-white w-36 py-2 rounded-md shadow-md z-20"
+                onMouseLeave={() => setLoginDropDown(false)}
+              >
+                <Link to="/LoginPage" className="block px-2 py-2 text-black">
+                  Login as User
+                </Link>
+                <Link to="/LoginPage" className="block px-2 py-2 text-black">
+                  Login as Vendor
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div className="  relative cursor-pointer ">
+            <Link to="/Signup">
+              <div className=" text-white py-4 px-4  cursor-pointer">
+                Register
+              </div>
+            </Link>
+          </div>
+        </div>
+
         <div
-          className={`${styles.button}`}
-          style={{ margin: "-20px 40px 0 10px", width: "170px" }}
+          className={`${styles.button} `}
+          style={{ width: "170px", marginRight: "20px" }}
         >
           <Link to="/vendor">
             <h1 className="text-[#fff] flex items-center">
@@ -173,7 +206,7 @@ const Header = ({ activeHeading }) => {
 
             <div className={`${styles.normalFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">
-                <Link to="/LoginPage">
+                <Link to="/">
                   <CgProfile size={30} color="rgb(255 255 255 / 83%)" />
                 </Link>
               </div>

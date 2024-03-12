@@ -7,8 +7,7 @@ const gradientColors = {
   },
   endColor: {
     hex: "#FFA500",
+    hex: "#051D40",
     rgb: [255, 165, 0],
   },
 };
-
-export default gradientColors;

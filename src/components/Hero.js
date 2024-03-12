@@ -1,36 +1,40 @@
-import "../styles/Hero.css";
-import solar1 from "../Assets/solar8.jpg";
-// import solar2 from "../Assets/solar9.jpg";
-// import solar3 from "../Assets/solar10.jpg";
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "../styles/styles";
+import solar1 from "../solar8.jpg";
 
 const Hero = () => {
   return (
     <div
-      className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat flex items-center p-8 border-4 border-white rounded-md`}
+      className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.normalFlex}`}
       style={{
         backgroundImage: `url(${solar1})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="text-center text-white  z-10">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-black opacity-50 "></div>
+
+      {/* Text container */}
+      <div
+        className={`${styles.section} text-center text-white absolute inset-0 flex flex-col justify-center`}
+      >
+        <h1 className={`leading-[1.2] text-4xl md:text-6xl font-bold mb-4`}>
           Empowering a Sustainable Future with Solar Energy
         </h1>
-        <p className="text-lg md:text-xl mb-8">
+        <p className="pt-5 font-[Poppins] font-[400] text-lg md:text-xl mb-8 ">
           Power your life with the sun. Explore our solar products for an
           eco-friendly energy solution.
         </p>
-
-        <a
-          href="/products"
-          className="bg-[#051d40] hover:bg-[#051d40] text-white font-bold py-2 px-4 rounded-full transition duration-300"
-        >
-          Explore Our Products
-        </a>
+        <Link to="/products" className="inline-block ">
+          <div className={`mt-5`}>
+            <span className="font-[Poppins] bg-[#051d40] hover:bg-[#051d40] text-white font-bold py-2 px-4 rounded-full transition duration-300">
+              Explore Our Products
+            </span>
+          </div>
+        </Link>
       </div>
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
     </div>
   );
 };

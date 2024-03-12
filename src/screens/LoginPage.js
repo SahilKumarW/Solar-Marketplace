@@ -1,7 +1,8 @@
-// src/components/LoginPage.js
 import React, { useState } from "react";
 import "../styles/LoginPage.css";
 import { Link } from "react-router-dom";
+import logo5 from "../logo5.png";
+import logincover from "../cover.jpg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -15,12 +16,32 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div
+      className="relative h-screen"
+      style={{
+        backgroundImage: `url(${logincover})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* <div className="absolute inset-0 bg-black opacity-50 "></div> */}
+
+      <Link to="/">
+        <img
+          src={logo5}
+          alt="Energy Matrix Logo"
+          style={{
+            height: "100px",
+            width: "150px",
+          }}
+        />
+      </Link>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-semibold text-gray-900">
+        <h2 className="text-center text-4xl font-semibold text-white">
           Welcome to <span style={{ color: "orange" }}>Energy Matrix!</span>
         </h2>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
           Login to your account
         </h2>
       </div>
@@ -86,25 +107,19 @@ const LoginPage = () => {
               </div>
             </div>
 
-            <div>
-              <button
-                type="submit"
-                className="custom-button"
-                onClick={handleLogin}
-              >
-                Login
-              </button>
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "20px",
-              }}
+            <button
+              type="submit"
+              className="custom-button"
+              onClick={handleLogin}
             >
-              <h4 style={{ marginRight: "8px" }}>Don't have any account?</h4>
-              <Link to="/Signup" className="text-blue-600">
+              Login
+            </button>
+
+            <div className="flex">
+              <h4 style={{ marginRight: "8px", marginTop: "20px" }}>
+                Don't have any account?
+              </h4>
+              <Link to="/Signup" className="text-blue-600 mt-5">
                 Sign Up
               </Link>
             </div>
