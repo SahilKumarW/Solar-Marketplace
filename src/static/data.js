@@ -298,6 +298,64 @@ export const brandingData = [
   },
 ];
 
+export const footerProductLinks = [
+  {
+    name: "About us",
+    link: "/about",
+  },
+  {
+    name: "Join Our Team",
+    link: "/careers",
+  },
+  {
+    name: "Our Locations",
+  },
+  {
+    name: "Our Blog",
+  },
+  {
+    name: "Reviews",
+  },
+];
+
+export const footerCompanyLinks = [
+  {
+    name: "Solar Panels",
+  },
+  {
+    name: "Inverters & Batteries",
+  },
+  {
+    name: "Energy Monitoring",
+  },
+  {
+    name: "Smart Home Solutions",
+  },
+  {
+    name: "Vendor Events",
+  },
+];
+
+export const footerSupportLinks = [
+  {
+    name: "FAQ",
+    link: "/faq",
+  },
+  {
+    name: "Reviews",
+  },
+  {
+    name: "Contact Us",
+    link: "/contactUs",
+  },
+  {
+    name: "Shipping",
+  },
+  {
+    name: "Live chat",
+  },
+];
+
 // categories data
 const categoriesData = [
   {

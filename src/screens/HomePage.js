@@ -8,6 +8,7 @@ import FeaturedProducts from "../components/FeaturedProducts";
 import StatsSection from "../components/StatsSection";
 import ReviewSection from "../components/ReviewSection";
 import Sponsored from "../components/Sponsored";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <StatsSection />
       <ReviewSection />
       <Sponsored />
+      <Footer />
     </div>
   );
 };
