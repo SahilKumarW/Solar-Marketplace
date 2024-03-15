@@ -75,7 +75,7 @@ const ReviewSection = () => {
   };
 
   return (
-    <div className="testimonial-container ">
+    <div className="testimonial-container " id="review">
       <h2 className="text-3xl font-bold mb-4 text-center mt-6">
         What Our Customers Say...
       </h2>

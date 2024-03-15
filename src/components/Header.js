@@ -15,6 +15,8 @@ import { BiMenuAltLeft } from "react-icons/bi";
 // import DropDown from "./DropDown";
 import Navbar from "./NavBar";
 import { CgProfile } from "react-icons/cg";
+import Cart from "./Cart";
+import Wishlist from "./Wishlist";
 
 const Header = ({ activeHeading }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -199,7 +201,7 @@ const Header = ({ activeHeading }) => {
                   color="rgb(255 255 255 / 83%)"
                 />
                 <span className="absolute right-0 top-0 rounded-full bg-[#FFA500] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
-                  {/* {cart && cart.length} */}1
+                  1 {/* Display cart count here */}
                 </span>
               </div>
             </div>
@@ -211,6 +213,14 @@ const Header = ({ activeHeading }) => {
                 </Link>
               </div>
             </div>
+
+            {/* cart popup */}
+            {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
+
+            {/* wishlist popup */}
+            {openWishlist ? (
+              <Wishlist setOpenWishlist={setOpenWishlist} />
+            ) : null}
           </div>
         </div>
       </div>

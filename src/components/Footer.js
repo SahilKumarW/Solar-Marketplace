@@ -1,5 +1,5 @@
 import React from "react";
-import logo5 from "../logo5.png";
+import logo6 from "../logo6.png";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -38,16 +38,17 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
         <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
           <img
-            src={logo5}
+            src={logo6}
             alt=""
             style={{
-              filter: "brightness(0) invert(1)",
+              //   filter: "brightness() invert(1)",
               height: "100px",
               width: "150px",
-              marginTop: "-30px",
+              marginTop: "-40px",
+              marginLeft: "-30px",
             }}
           />
-          <br />
+          {/* <br /> */}
           <p>Empowering Your Energy Future with Innovative Solutions.</p>
           <div className="flex items-center mt-[15px]">
             <AiFillFacebook size={25} className="cursor-pointer" />

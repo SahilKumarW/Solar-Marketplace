@@ -131,7 +131,13 @@ const ProductCard = ({ data }) => {
             color="#444"
             title="Add to cart"
           />
-          {open ? <ProductDetailsCard setOpen={setOpen} data={data} /> : null}
+          {open ? (
+            <ProductDetailsCard
+              setOpen={setOpen}
+              data={data}
+              // addToCart={addToCart}
+            />
+          ) : null}
         </div>
       </div>
     </>

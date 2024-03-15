@@ -26,6 +26,7 @@ const ProductDetailsCard = ({ setOpen, data }) => {
   const incrementCount = () => {
     setCount(count + 1);
   };
+
   return (
     <div className="bg-[#fff]">
       {data ? (
@@ -146,7 +147,6 @@ const ProductDetailsCard = ({ setOpen, data }) => {
 
                 <div
                   className={`${styles.button} mt-10 rounded-[4px] h-11 flex items-center`}
-                  // onClick={() => addToCartHandler(data._id)}
                 >
                   <span className="text-[#fff] flex items-center">
                     Add to cart <AiOutlineShoppingCart className="ml-1" />

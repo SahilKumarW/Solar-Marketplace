@@ -3,7 +3,7 @@ export const solarProducts = [
   {
     id: 1,
     category: "Solar Panels",
-    name: "High-Efficiency Solar Panel",
+    name: "High Efficiency Solar Panel",
     description:
       "High-efficiency solar panel for residential and commercial use. Generate clean energy and reduce your carbon footprint.",
     image_URL: "../Assets/solarpanel.jpg",
@@ -46,7 +46,7 @@ export const solarProducts = [
   {
     id: 3,
     category: "Solar Batteries",
-    name: "Long-Life Solar Battery",
+    name: "Long Life Solar Battery",
     description:
       "Long-lasting lithium-ion battery for solar storage. Store excess energy during the day for use during the night or cloudy days.",
     image_URL: "/Assets/battery.jpg",
@@ -59,7 +59,7 @@ export const solarProducts = [
       ratings: 4.0,
     },
     price: 79.99,
-    discount_price: 79.99,
+    discount_price: 74.99,
     rating: 4.0,
     total_sell: 25,
     stock: 12,
@@ -100,13 +100,96 @@ export const solarProducts = [
       },
       ratings: 4.5,
     },
-    price: 29.99,
+    price: 30.99,
     discount_price: 24.99,
     rating: 4.5,
     total_sell: 35,
     stock: 20,
   },
-  // Add more solar products as needed
+  {
+    id: 6,
+    category: "Solar Water Heaters",
+    name: "Compact Water Heater",
+    description:
+      "Efficient and compact solar water heater for eco-friendly hot water solutions.",
+    image_URL: "/Assets/water.jpg",
+    shop: {
+      name: "Walmart",
+      shop_avatar: {
+        public_id: "solar-water-heater-avatar",
+        url: "/Assets/walmart.png",
+      },
+      ratings: 4.7,
+    },
+    price: 27.99,
+    discount_price: 25.99,
+    rating: 4.7,
+    total_sell: 30,
+    stock: 20,
+  },
+  {
+    id: 7,
+    category: "Solar Chargers",
+    name: "Foldable Solar Charger",
+    description:
+      "Charge your devices on the go with this foldable solar phone charger.",
+    image_URL: "/Assets/folder.jpg",
+    shop: {
+      name: "Shopping Express",
+      shop_avatar: {
+        public_id: "solar-charger-avatar",
+        url: "/Assets/bestbuy.png",
+      },
+      ratings: 4.6,
+    },
+    price: 49.99,
+    discount_price: 44.99,
+    rating: 4.6,
+    total_sell: 45,
+    stock: 15,
+  },
+  {
+    id: 8,
+    category: "Solar Fans",
+    name: "Quiet Solar Powered Fan",
+    description:
+      "Stay cool with this quiet and energy-efficient solar-powered fan for your home or office.",
+    image_URL: "/Assets/fan.jpg",
+    shop: {
+      name: "Honey's Air & Solar",
+      shop_avatar: {
+        public_id: "solar-fan-avatar",
+        url: "/Assets/target.png",
+      },
+      ratings: 4.4,
+    },
+    price: 79.99,
+    discount_price: 69.99,
+    rating: 4.4,
+    total_sell: 35,
+    stock: 18,
+  },
+  {
+    id: 9,
+    category: "Solar Garden Lights",
+    name: " Solar Garden Lights",
+    description:
+      "Enhance your garden with these decorative solar-powered LED lights for a magical ambiance.",
+    image_URL: "/Assets/garden.jpg",
+    shop: {
+      name: "Kohl's",
+      shop_avatar: {
+        public_id: "solar-garden-lights-avatar",
+        url: "/Assets/kohls.png",
+      },
+      ratings: 4.6,
+    },
+    price: 29.99,
+    discount_price: 24.99,
+    rating: 4.6,
+    total_sell: 30,
+    stock: 12,
+  },
 ];
 
 // navigation Data
@@ -117,7 +200,7 @@ export const navItems = [
   },
   {
     title: "Solar Packages",
-    url: "/best-selling",
+    url: "/solarPackages",
   },
   {
     title: "Products",
@@ -125,7 +208,7 @@ export const navItems = [
   },
   {
     title: "Contact Us",
-    url: "/events",
+    url: "/contactUs",
   },
   {
     title: "FAQ",
@@ -315,6 +398,7 @@ export const footerProductLinks = [
   },
   {
     name: "Reviews",
+    link: "/review",
   },
 ];
 
@@ -353,6 +437,94 @@ export const footerSupportLinks = [
   },
   {
     name: "Live chat",
+  },
+];
+
+// In your static/data.js file or wherever you store your data
+
+export const solarPackagesData = [
+  {
+    id: 1,
+    name: "Standard Solar Package",
+    description: "Basic solar package for small households.",
+    image_URL: "/path/to/standard_solar_package_image.jpg",
+    price: 1999.99,
+    capacity: "5 kW",
+    warranty: "5 years",
+    features: ["Energy-efficient", "Easy installation", "Smart monitoring"],
+  },
+  {
+    id: 2,
+    name: "Premium Solar Package",
+    description: "Advanced solar package for larger energy needs.",
+    image_URL: "/path/to/premium_solar_package_image.jpg",
+    price: 2999.99,
+    capacity: "10 kW",
+    warranty: "10 years",
+    features: ["High efficiency", "Remote monitoring", "Battery backup"],
+  },
+  {
+    id: 3,
+    name: "Eco-Friendly Solar Bundle",
+    description: "Go green with our environmentally friendly solar bundle.",
+    image_URL: "/path/to/eco_friendly_solar_bundle_image.jpg",
+    price: 2499.99,
+    capacity: "8 kW",
+    warranty: "7 years",
+    features: [
+      "Renewable energy",
+      "Sustainable materials",
+      "Low carbon footprint",
+    ],
+  },
+  {
+    id: 4,
+    name: "Smart Home Solar Solution",
+    description: "Make your home smarter with our integrated solar solution.",
+    image_URL: "/path/to/smart_home_solar_solution_image.jpg",
+    price: 3499.99,
+    capacity: "12 kW",
+    warranty: "8 years",
+    features: ["Home automation", "Energy optimization", "Voice control"],
+  },
+  {
+    id: 5,
+    name: "Off-Grid Solar Power System",
+    description: "Gain independence with our off-grid solar power system.",
+    image_URL: "/path/to/off_grid_solar_power_system_image.jpg",
+    price: 3999.99,
+    capacity: "15 kW",
+    warranty: "12 years",
+    features: [
+      "Energy self-sufficiency",
+      "Battery storage",
+      "Remote locations",
+    ],
+  },
+  {
+    id: 6,
+    name: "Compact Solar Starter Kit",
+    description: "Start your solar journey with our compact starter kit.",
+    image_URL: "/path/to/compact_solar_starter_kit_image.jpg",
+    price: 1799.99,
+    capacity: "3 kW",
+    warranty: "5 years",
+    features: ["Affordable", "Easy setup", "Ideal for small spaces"],
+  },
+  {
+    id: 7,
+    name: "Industrial Solar Power Solution",
+    description:
+      "Power your industrial operations with our robust solar solution.",
+    image_URL: "/path/to/industrial_solar_power_solution_image.jpg",
+    price: 5999.99,
+    capacity: "20 kW",
+    warranty: "15 years",
+    features: [
+      "Heavy-duty performance",
+      "Customizable configurations",
+      "Industrial-grade components",
+    ],
   },
 ];
 
