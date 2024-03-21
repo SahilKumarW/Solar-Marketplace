@@ -7,6 +7,8 @@ import SolarPackagesPage from "./screens/SolarPackagesPage";
 import ContactPage from "./screens/ContactPage";
 import FaqPage from "./screens/FaqPage.js";
 import ProductDetailsPage from "./screens/ProductDetailsPage";
+import ProfilePage from "./screens/ProfilePage.js";
+import CheckoutPage from "./screens/CheckoutPage.js";
 
 export {
   LoginPage,
@@ -17,5 +19,7 @@ export {
   SolarPackagesPage,
   ContactPage,
   FaqPage,
+  CheckoutPage,
   ProductDetailsPage,
+  ProfilePage,
 };

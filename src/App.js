@@ -10,7 +10,9 @@ import {
   SolarPackagesPage,
   ContactPage,
   FaqPage,
+  CheckoutPage,
   ProductDetailsPage,
+  ProfilePage,
 } from "./Routes.js";
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         <Route path="/solarPackages" element={<SolarPackagesPage />} />
         <Route path="/contactUs" element={<ContactPage />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

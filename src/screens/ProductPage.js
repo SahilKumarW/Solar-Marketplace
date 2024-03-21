@@ -29,8 +29,14 @@ const ProductPage = () => {
     <div>
       <Header activeHeading={3} />
       <br />
-      <br />
+
       <div className={`${styles.section}`}>
+        <div
+          className="text-3xl font-bold mb-4 text-center"
+          style={{ textShadow: "2px 2px 5px orange" }}
+        >
+          <h1>Products</h1>
+        </div>
         <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12">
           {data && data.map((i, index) => <ProductCard data={i} key={index} />)}
           {data && data.length === 0 ? <h1></h1> : null}

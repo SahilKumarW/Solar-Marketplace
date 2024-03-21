@@ -27,6 +27,10 @@ const Cart = ({ setOpenCart }) => {
     <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
       <div className="fixed top-0 right-0 h-full w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm">
         <div>
+          <div className="flex  justify-center">
+            <h5 className=" text-[20px] font-[500]">My Cart</h5>
+          </div>
+
           <div className="w-full flex  justify-end pt-5 pr-5">
             <RxCross1
               size={25}
