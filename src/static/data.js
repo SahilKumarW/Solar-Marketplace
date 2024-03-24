@@ -104,7 +104,7 @@ export const solarProducts = [
     discount_price: 24.99,
     rating: 4.5,
     total_sell: 35,
-    stock: 20,
+    stock: 3,
   },
   {
     id: 6,
@@ -146,7 +146,7 @@ export const solarProducts = [
     discount_price: 44.99,
     rating: 4.6,
     total_sell: 45,
-    stock: 15,
+    stock: 4,
   },
   {
     id: 8,

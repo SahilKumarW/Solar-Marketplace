@@ -91,7 +91,7 @@ const ProfileSideBar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(6)}
       >
@@ -103,21 +103,21 @@ const ProfileSideBar = ({ setActive, active }) => {
         >
           Payment Methods
         </span>
-      </div>
+      </div> */}
 
-      {/* <div
+      <div
         className="flex items-center cursor-pointer w-full mb-8"
-        onClick={() => setActive(7)}
+        onClick={() => setActive(6)}
       >
-        <RiLockPasswordLine size={20} color={active === 7 ? "red" : ""} />
+        <RiLockPasswordLine size={20} color={active === 6 ? "red" : ""} />
         <span
           className={`pl-3 ${
-            active === 7 ? "text-[red]" : ""
+            active === 6 ? "text-[red]" : ""
           } 800px:block hidden`}
         >
           Change Password
         </span>
-      </div> */}
+      </div>
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"

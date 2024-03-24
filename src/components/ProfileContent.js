@@ -32,8 +32,8 @@ const ProfileContent = ({ active, data }) => {
         <>
           <div className="flex justify-center w-full">
             <div className="relative">
-              <img
-                src="../dummy.jpeg"
+              <CgProfile
+                size={35}
                 className="w-[150px] h-[150px]  border-[3px] border-[#3ad132] rounded-full "
               />
               <div
@@ -151,10 +151,10 @@ const ProfileContent = ({ active, data }) => {
         </div>
       )}
 
-      {/* Payment methods */}
+      {/* change password */}
       {active === 6 && (
         <div>
-          <PaymentMethods />
+          <ChangePassword />
         </div>
       )}
 
@@ -543,30 +543,61 @@ const TrackOrder = () => {
   );
 };
 
-const PaymentMethods = () => {
+const ChangePassword = () => {
+  const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const passwordChangeHandler = () => {};
   return (
     <div className="w-full px-5">
-      <div className="flex w-full items-center justify-between">
-        <h1 className=" text-[25px] text-center font-[600] text-[#000000ba] pb-2">
-          Payment Methods
-        </h1>
-        <div className={`${styles.button} !rounded-md`}>
-          <span className="text-[#fff]">Add new</span>
-        </div>
-      </div>
-      <br />
-      <div className="w-full bg-white h-[70px] rounded-[4px] flex items-center px-3 shadow justify-between pr-10">
-        <div className="flex items-center">
-          <img src="../visa.svg" style={{ height: 40, marginTop: 8 }} />
-          <h5 className="pl-5 font-[600]">Shah Ali</h5>
-        </div>
-        <div className=" pl-8 flex items-center">
-          <h6>123 **** *** ****</h6>
-          <h5 className=" pl-6">05/2025</h5>
-        </div>
-        <div className=" min-w-[10%] pl-8 flex items-center justify-between">
-          <AiOutlineDelete size={25} className="cursor-pointer" />
-        </div>
+      <h1 className=" text-[25px] text-center block font-[600] text-[#000000ba] pb-2">
+        Change Password
+      </h1>
+
+      <div className="w-full">
+        <form
+          aria-required
+          onSubmit={passwordChangeHandler}
+          className="flex flex-col items-center"
+        >
+          <div className=" w-[100%] 800px:w-[50%] mt-5">
+            <label className="block pb-2">Enter your old password</label>
+            <input
+              type="password"
+              className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
+              required
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
+            />
+          </div>
+          <div className=" w-[100%] 800px:w-[50%] mt-2">
+            <label className="block pb-2">Enter your new password</label>
+            <input
+              type="password"
+              className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
+              required
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+          </div>
+          <div className=" w-[100%] 800px:w-[50%] mt-2">
+            <label className="block pb-2">Enter your confirm password</label>
+            <input
+              type="password"
+              className={`${styles.input} !w-[95%] mb-4 800px:mb-0`}
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            <input
+              className={`w-[95%] h-[40px] border border-[#3a24db] text-center text-[#3a24db] rounded-[3px] mt-8 cursor-pointer`}
+              required
+              value="Update"
+              type="submit"
+            />
+          </div>
+        </form>
       </div>
     </div>
   );

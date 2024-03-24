@@ -14,6 +14,9 @@ import {
   ProductDetailsPage,
   ProfilePage,
 } from "./Routes.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Store from "./redux/store.js";
 
 function App() {
   return (
@@ -31,6 +34,7 @@ function App() {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

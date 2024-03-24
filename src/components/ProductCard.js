@@ -10,9 +10,11 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import ProductDetailsCard from "./ProductDetailsCard";
+import { useSelector } from "react-redux";
 
 const ProductCard = ({ data }) => {
   const [hovered, setHovered] = useState(false);
+
   const [click, setClick] = useState(false);
   const [open, setOpen] = useState(false);
 
