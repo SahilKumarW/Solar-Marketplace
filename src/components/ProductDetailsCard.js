@@ -48,8 +48,6 @@ const ProductDetailsCard = ({ setOpen, data }) => {
       }
     }
   };
-  console.log("data is", data._id);
-  console.log(cart);
 
   useEffect(() => {
     if (wishlist && wishlist.find((i) => i.id === data.id)) {

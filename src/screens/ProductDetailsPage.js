@@ -7,20 +7,17 @@ import { solarProducts } from "../static/data";
 import SuggestedProduct from "../components/SuggestedProduct";
 
 const ProductDetailsPage = () => {
-  const { name } = useParams();
-  console.log("Name:", name);
+  const { id } = useParams();
   const [data, setData] = useState(null);
 
-  const productName = name.replace(/-/g, " ");
-
-  console.log("Product Name:", productName);
-
   useEffect(() => {
-    const data = solarProducts.find((i) => i.name === productName);
-    console.log("Solar Products:", solarProducts);
-    console.log("Data in useEffect:", data);
+    // const data = solarProducts && solarProducts.find((i) => i.id === id);
+    const data =
+      solarProducts && solarProducts.find((item) => item.id === parseInt(id));
     setData(data);
-  }, [productName]);
+  }, [id]);
+  console.log("data is", solarProducts);
+
   return (
     <div>
       <Header />

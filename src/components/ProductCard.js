@@ -32,9 +32,6 @@ const ProductCard = ({ data }) => {
     setHovered(false);
   };
 
-  const d = data.name;
-  const product_name = d.replace(/\s+/g, "-");
-
   useEffect(() => {
     if (wishlist && wishlist.find((i) => i.id === data.id)) {
       setClick(true);
@@ -77,7 +74,7 @@ const ProductCard = ({ data }) => {
           onMouseLeave={handleMouseLeave}
           onMouseEnter={handleMouseEnter}
         >
-          <Link to={`/product/${product_name}`}>
+          <Link to={`/product/${data.id}`}>
             <img
               src={data.image_URL}
               className="w-full h-[170px] object-cover"
@@ -87,7 +84,7 @@ const ProductCard = ({ data }) => {
           <Link to="/">
             <h5 className={`${styles.shop_name}`}>{data.shop.name}</h5>
           </Link>
-          <Link to={`/product/${product_name}`}>
+          <Link to={`/product/${data.id}`}>
             <h4 className="pb-2 font-[500]">
               {data.name.length > 40
                 ? data.name.slice(0, 40) + "..."
