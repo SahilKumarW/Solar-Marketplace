@@ -57,12 +57,39 @@ app.post('/Signup', async (req, res) => {
     }
 });
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
-    // Perform authentication logic
-    // Check if email and password match in the database
-    // Return appropriate response based on authentication result
+    try {
+        // Check if user exists in the database
+        const getUserSql = 'SELECT * FROM customers WHERE Email = ?';
+        const [rows] = await db.promise().query(getUserSql, [email]);
+
+        // If no user found with the provided email, return error
+        if (rows.length === 0) {
+            console.error('User not found');
+            res.status(404).json({ error: 'User not found' });
+            return;
+        }
+
+        // Compare the provided password with the stored hashed password
+        const hashedPassword = rows[0].Password;
+        const passwordMatch = await bcrypt.compare(password, hashedPassword);
+
+        // If passwords don't match, return error
+        if (!passwordMatch) {
+            console.error('Incorrect password');
+            res.status(401).json({ error: 'Incorrect password' });
+            return;
+        }
+
+        // If authentication successful, return success message
+        console.log('Login successful');
+        res.status(200).json({ message: 'Login successful' });
+    } catch (error) {
+        console.error('Error during login:', error);
+        res.status(500).json({ error: 'Error during login' });
+    }
 });
 
 // Start the server
